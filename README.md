@@ -1,6 +1,6 @@
 # rainbowprint
 
-![ ](docs/example1.png)
+![ ](docs/example1.png | width=100)
 
 The most basic structure with the absolute minimum for the package to be installable:
 
