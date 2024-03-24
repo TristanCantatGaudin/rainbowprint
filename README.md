@@ -23,3 +23,7 @@ Or, to install it in a fresh environment:
     	conda install pip
 
 and then go for `pip install...`
+
+## pyproject.toml
+
+This file contains some basic information about the package (e.g. name, version) but importantly lists dependencies (in the present case `matplotlib`, it will be automatically installed when you install `rainbowprint`) and the installation package that `pip` will rely on for the installation (here, `setuptools`).
