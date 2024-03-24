@@ -9,7 +9,7 @@ The most basic structure with the absolute minimum for the package to be install
 	        ├── __init__.py
 	        └── functions.py
 
-Here we also have a README.md and a LICENSE file. We can also have a directories containing tests.
+With just the soure code and a pyproject.toml file, the repository is already installable as a Python package. It will be the bare minimum though. Further down I list many things that can make the package better.
 
 ## Installation:
 
@@ -27,11 +27,13 @@ To test in one line that it worked, you can type:
 
 	python -c "from rainbowprint.functions import rainbowprint; rainbowprint('This is a rainbow')"
 
-## pyproject.toml
+## What is the pyproject.toml file?
 
 This file contains some basic information about the package (e.g. name, version) but importantly lists dependencies (in the present case `matplotlib`, it will be automatically installed when you install `rainbowprint`) and the installation package (called a *build backend*) that `pip` (the *build frontend* tool) will rely on for the installation (here we chose `setuptools` as a build backend).
 
-## To do:
-
+# Better
+* README.md, LICENSE
 * tests (at least import), pytest + workflow
 * notebook example + compile workflow
+* documentation (sphynx in repo, or readthedocs)
+* pypi
