@@ -22,8 +22,8 @@ With just the soure code and a pyproject.toml file, the repository is already in
 Or, to install it in a fresh environment:
 
    	conda create -n someNewEnvName
-    	conda activate someNewEnvName
-    	conda install pip
+   	conda activate someNewEnvName
+   	conda install pip
 
 and then go for `pip install...`
 
