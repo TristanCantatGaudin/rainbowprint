@@ -1,9 +1,10 @@
 # rainbowprint
 
+I built this repository as a template showing a simple installable Python package. The package can only done one pretty useless thing: apply a `matplotlib` color gradient to a string and print it to the screen. Example:
+
 <img src="docs/example1.png" width="500" />
 
-
-The most basic structure with the absolute minimum for the package to be installable:
+The most basic structure for the package to be installable is:
 
 	rainbowprint/
 	├── pyproject.toml
@@ -12,7 +13,7 @@ The most basic structure with the absolute minimum for the package to be install
 	        ├── __init__.py
 	        └── functions.py
 
-With just the soure code and a pyproject.toml file, the repository is already installable as a Python package. It will be the bare minimum though. Further down I list many things that can make the package better.
+With just the soure code and a pyproject.toml file, the repository is already installable as a Python package. It will be the bare minimum though. Further down I list many things that can make a package better.
 
 ## Installation:
 
