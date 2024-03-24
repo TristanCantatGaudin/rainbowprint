@@ -1,3 +1,11 @@
 # rainbowprint
 
-This is the readme.
+		rainbowprint/
+		├── LICENSE
+		├── pyproject.toml
+		├── README.md
+		├── src/
+		│   └── rainbowprint/
+		│       ├── __init__.py
+		│       └── functions.py
+		└── tests/
