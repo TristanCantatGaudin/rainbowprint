@@ -1,16 +1,15 @@
 # rainbowprint
 
-The most basic structure for the package to be installable:
+The most basic structure with the absolute minimum for the package to be installable:
 
 	rainbowprint/
-	├── LICENSE
 	├── pyproject.toml
-	├── README.md
-	├── src/
-	│   └── rainbowprint/
-	│       ├── __init__.py
-	│       └── functions.py
-	└── tests/
+	└── src/
+	    └── rainbowprint/
+	        ├── __init__.py
+	        └── functions.py
+
+Here we also have a README.md and a LICENSE file. We can also have a directories containing tests.
 
   ## Installation:
 
