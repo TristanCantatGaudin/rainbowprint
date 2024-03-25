@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 
 def rainbowprint(input_string,cmap_name='cool'):
 	"""
+	Apply a color gradient and print the string.
+ 
 	Input:	input_string	the string to print
  		optional cmap_name: the name of the matplotlib color map to use
 
