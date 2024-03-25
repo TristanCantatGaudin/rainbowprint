@@ -1,6 +1,6 @@
 # rainbowprint - an example of a simple Python package
 
-I built this repository as a template showing a simple installable Python package. The package can only do one (pretty useless) thing: apply a `matplotlib` color gradient to a string and print it to the screen. The default color map is `cool`:
+I built this repository as a template to show a simple installable Python package. The package can only do one (pretty useless) thing: apply a `matplotlib` color gradient to a string and print it to the screen. The default color map is `cool`:
 
 <img src="docs/example1.png" width="500" />
 
