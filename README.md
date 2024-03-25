@@ -4,6 +4,8 @@ I built this repository as a template showing a simple installable Python packag
 
 <img src="docs/example1.png" width="500" />
 
+It also runs [inside a Jupyter notebook](docs/notebook1.ipynb).
+
 The most basic structure for the package to be installable is:
 
 	rainbowprint/
