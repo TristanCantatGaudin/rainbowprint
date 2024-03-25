@@ -38,7 +38,7 @@ To test in one line that it worked, you can type:
 	import rainbowprint
 	rainbowprint.functions.rainbowprint('some string')
 
-and crashes with the error message *AttributeError: module 'rainbowprint' has no attribute 'functions'*.
+and crashes with the error message *AttributeError: module 'rainbowprint' has no attribute 'functions'*. We can add `from .functions import *` to the `__init__.py` file so that importing the package imports the `functions` module too.
 
 ## Necessary file: pyproject.toml
 
