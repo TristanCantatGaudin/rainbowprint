@@ -67,4 +67,4 @@ A convenient set up is to use workflows to install the package and run tests aft
 
 ## pypi 
 
-...
+tags, versions, releases
