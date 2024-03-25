@@ -15,7 +15,7 @@ The most basic structure for the package to be installable is:
 	        ├── __init__.py
 	        └── functions.py
 
-With just the soure code and a pyproject.toml file, the repository is already installable as a Python package. It will be the bare minimum though. Further down I list many things that can make a package better.
+With just the soure code and the **pyproject.toml** file, the repository is already installable as a Python package. It will be the bare minimum though. Further down I list many things that can make a package better.
 
 ## Installation:
 
