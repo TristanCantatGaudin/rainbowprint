@@ -1,6 +1,6 @@
 # rainbowprint
 
-I built this repository as a template showing a simple installable Python package. The package can only do one (pretty useless) thing: apply a `matplotlib` color gradient to a string and print it to the screen. The default color map is `cool`. Example:
+I built this repository as a template showing a simple installable Python package. The package can only do one (pretty useless) thing: apply a `matplotlib` color gradient to a string and print it to the screen. The default color map is `cool`:
 
 <img src="docs/example1.png" width="500" />
 
@@ -43,8 +43,24 @@ All the rest is "optional", but many extra features are useful. For instance, ha
 
 In the main directory, create a `tests` dir. It can contain several .py files, each one possibly containing several functions. There are several packages to run test suites, I use `pytest` (which is pip installable). When in the main directory, running the command `pytest` will run all the tests inside the `tests` directory. If you are inside the `tests` directory you can also run a specific subset of tests, for instance `pytest test_import.py`.
 
-# Better
-* tests (at least import), pytest + workflow
-* notebook example + compile workflow
-* documentation (sphynx in repo, or readthedocs)
-* pypi
+## workflow to run tests
+
+A workflow is a script that GitHub runs automatically on its servers. These scripts have to be placed in the directory `rainbowprint/.github/workflows/`, and are written in YAML (a very human-readable language). The script can be run on a schedule (every hour, every day at 9am, every Monday, etc see [cron scheduling](https://en.wikipedia.org/wiki/Cron)). It can also be triggered by a commit or a pull, or manually (see `workflow_dispatch`).
+
+A convenient set up is to use workflows to install the package and run tests after each commit. So if our changes broke something, we will know immediately. NB: if the tests fail it doesn't necessarily mean it is caused by your update (the bug may come from external dependencies), so go check the complete log of the run. You can use multiple versions of Python, OS, etc. You can even set up the workflow to only be triggered by commits to a certain branch (e.g. main), or only changes to certain files or directories. Here I have set it up to not be executed if changes are made to the README file.
+
+## workflow for linting
+
+...
+
+## workflow for documentation
+
+...
+
+## workflow for linting
+
+...
+
+## pypi 
+
+...
