@@ -53,9 +53,7 @@ A convenient set up is to use workflows to install the package and run tests aft
 
 **NB:** if the tests fail it doesn't necessarily mean it is caused by your update (the bug may come from external dependencies), so go check the complete log of the run.
 
-## workflow for linting
 
-...
 
 ## workflow for documentation
 
