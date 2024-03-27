@@ -18,15 +18,13 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install .
           pip install jupyter
-      - name: Run Script and Update Plot
+      - name: Convert notebook to html
         run: |
-          python query_and_plot.py
-        env:
-          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
+          jupyter nbconvert --execute --to html docs/notebook1.ipynb
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add citations_per_month.png
-          git commit -m "Updated plot on `date` with GitHub Actions"
+          git add docs/notebook1.ipynb
+          git commit -m "Added html notebook on `date` with GitHub Actions"
           git push origin main --force
