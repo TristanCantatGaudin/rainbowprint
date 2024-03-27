@@ -54,13 +54,18 @@ In the main directory, create a `tests` dir. It can contain several .py files, e
 
 ## workflow to run tests
 
-A workflow is a script that GitHub runs automatically on its servers. These scripts have to be placed in the directory `rainbowprint/.github/workflows/`, and are written in YAML (a very human-readable language). The script can be run on a schedule (every hour, every day at 9am, every Monday, etc see [cron scheduling](https://en.wikipedia.org/wiki/Cron)). It can also be triggered by a commit or a pull, or manually (look up `workflow_dispatch`).
+A workflow is a script that GitHub runs automatically on its servers. These scripts have to be placed in the directory `rainbowprint/.github/workflows/`, and are written in YAML (a very human-readable language). The script can be run on a schedule (every hour, every day at 9am, every Monday, etc see [cron scheduling](https://en.wikipedia.org/wiki/Cron)). It can also be triggered by a commit or a pull, or manually (on: `workflow_dispatch`).
 
 A convenient set up is to use workflows to install the package and run tests after each commit. If the last commit breaks something, we then know it immediately. You can use multiple versions of Python, OS, etc and the jobs will be run in parallel inside multiple virtual machines. You can set up the workflow to only be triggered by commits to a certain branch (e.g. main), or only changes to certain files or directories. Here I have set it up to not be executed if changes are made to the README file.
 
 **NB:** if the tests fail it doesn't necessarily mean the problem was caused by your update (the bug may come from external dependencies), so go check the complete log of the run.
 
 
+## workflow to compile notebooks
+
+in `Settings -> Actions -> General -> Workflow permissions` make sure that "Read and write permissions" is enabled, to allow the GitHub Actions bot to commit new files to the repository.
+
+I created a second workflow which installs the present package and Jupyter, then executes the notebook in `docs/notebook1.ipynb`, then converts the result to an html page and uploads (commits + pushes) both these files to the repository. The resulting page is visible here: https://htmlpreview.github.io/?https://github.com/TristanCantatGaudin/rainbowprint/blob/main/docs/notebook1.html
 
 ## workflow for documentation
 
