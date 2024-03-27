@@ -29,5 +29,6 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add docs/notebook1.html
           git add docs/notebook1.ipynb
-          git commit -m "Added html notebook on `date` with GitHub Actions"
+          git status
+          git commit -m "pushed notebooks on `date` with GitHub Actions"
           git push origin main --force
