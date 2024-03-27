@@ -1,0 +1,35 @@
+name: Compile notebooks
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+  	
+jobs:
+  compile_notebook:
+    name: Update plot with new citations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+          cache: 'pip'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install .
+          pip install jupyter
+      - name: Run Script and Update Plot
+        run: |
+          python query_and_plot.py
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add citations_per_month.png
+          git commit -m "Updated plot on `date` with GitHub Actions"
+          git push origin main --force
