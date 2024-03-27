@@ -1,9 +1,6 @@
 name: Compile notebooks
 on:
-  schedule:
-    - cron: '0 9 * * *'
   workflow_dispatch:
-  	
 jobs:
   compile_notebook:
     name: Update plot with new citations
