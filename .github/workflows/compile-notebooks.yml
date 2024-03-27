@@ -19,7 +19,8 @@ jobs:
           pip install jupyter
       - name: Convert notebook to html
         run: |
-          jupyter nbconvert --execute --to html docs/notebook1.ipynb
+          jupyter nbconvert --to notebook --execute docs/notebook1.ipynb
+          jupyter nbconvert --to html --execute docs/notebook1.ipynb
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
