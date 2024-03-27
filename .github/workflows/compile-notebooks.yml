@@ -1,6 +1,8 @@
 name: Compile notebooks
 on:
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   compile_notebook:
     name: Update plot with new citations
