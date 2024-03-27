@@ -1,14 +1,19 @@
 import matplotlib.pyplot as plt
 
 def rainbowprint(input_string,cmap_name='cool'):
-	"""
-	Apply a color gradient and print the string.
- 
-	Input:	input_string	the string to print
- 		optional cmap_name: the name of the matplotlib color map to use
+	"""Prints a string with a color gradient.
+	
+	Args:
+		input_string (:obj:`str`): The string to be printed.
+		cmap_name (:obj:`str`, optional): Matplotlib map to use (default: `cool`).
+	
+	Returns:
+		None
 
-   	Output: None.
- 	"""
+  	Raises:
+   		TypeError: if `input_string` is not a string.
+	
+	"""
 	try: # catch incorrect map names:
 		colormap = plt.get_cmap(cmap_name)
 	except:
