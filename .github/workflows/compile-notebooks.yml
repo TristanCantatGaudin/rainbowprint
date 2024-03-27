@@ -24,6 +24,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
+          git add docs/notebook1.html
           git add docs/notebook1.ipynb
           git commit -m "Added html notebook on `date` with GitHub Actions"
           git push origin main --force
