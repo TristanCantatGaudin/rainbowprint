@@ -82,7 +82,7 @@ This will prompt a few basic questions (package name, author, version) and creat
 	cd ..
 	sphinx-apidoc -o docs src/
 
- will create additional files in `docs/`.
+ will create additional .rst files in `docs/`.
 
 ## workflow for linting
 
