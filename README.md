@@ -63,9 +63,11 @@ A convenient set up is to use workflows to install the package and run tests aft
 
 ## workflow to compile notebooks
 
-in `Settings -> Actions -> General -> Workflow permissions` make sure that "Read and write permissions" is enabled, to allow the GitHub Actions bot to commit new files to the repository.
+in `Settings -> Actions -> General -> Workflow permissions` make sure that "Read and write permissions" is enabled, to allow the GitHub Actions bot to commit new files to the repository. 
 
-I created a second workflow which installs the present package and Jupyter, then executes the notebook in `docs/notebook1.ipynb`, then converts the result to an html page and uploads (commits + pushes) both these files to the repository. The resulting page is visible here: https://htmlpreview.github.io/?https://github.com/TristanCantatGaudin/rainbowprint/blob/main/docs/notebook1.html
+I created a second workflow which installs the present package and Jupyter, then executes the notebook in `docs/notebook1.ipynb`, then converts the result to an HTML page and uploads (commits + pushes) both these files to the repository. This workflow can only be started manually. The resulting page is visible here: https://htmlpreview.github.io/?https://github.com/TristanCantatGaudin/rainbowprint/blob/main/docs/notebook1.html
+
+**NB:** if the newly compiled notebook (and corresponding HTML) is unchanged, then "git add ..." will do nothing, and the GitHub Actions both will not upload any new file, which may cause the workflow to exit with an error. So for the sake of this example the notebook also prints the current date and time, just to make sure that the workflow creates new files every time.
 
 ## workflow for documentation
 
