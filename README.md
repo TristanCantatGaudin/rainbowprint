@@ -69,9 +69,15 @@ I created a second workflow which installs the present package and Jupyter, then
 
 **NB:** if the newly compiled notebook (and corresponding HTML) is unchanged, then "git add ..." will do nothing, and the GitHub Actions both will not upload any new file, which may cause the workflow to exit with an error. So for the sake of this example the notebook also prints the current date and time, just to make sure that the workflow creates new files every time.
 
-## workflow for documentation
+## documentation with sphinx
 
-...
+Install `sphinx locally` (or `pip install sphinx-rtd-theme` etc to install other themes, see https://sphinx-themes.org/):
+
+	pip install sphinx
+ 	cd docs
+  	sphinx-quickstart
+
+This will prompt a few basic questions (package name, author, version) and create new files. 
 
 ## workflow for linting
 
