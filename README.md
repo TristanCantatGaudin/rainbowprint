@@ -77,12 +77,9 @@ Install `sphinx locally` (or `pip install sphinx-rtd-theme` etc to install other
  	cd docs
   	sphinx-quickstart
 
-This will prompt a few basic questions (package name, author, version) and create new files. In the file `conf.py` look for the line `extensions = []` and replace it with `extensions = ['sphinx.ext.autodoc']`. This sphinx extinction can turn docstrings into documentation automatically. Then:
+This will prompt a few basic questions (package name, author, version) and create new files. 
 
-	cd ..
-	sphinx-apidoc -o docs src/
-
- will create additional .rst files in `docs/`.
+...
 
 ## workflow for linting
 
