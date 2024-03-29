@@ -25,11 +25,6 @@ Installation
 To use `rainbowprint` you need to install X, Y and Z. 
 
 
-.. _code:
-
-Code
-----
-
 
 ..
   The following section creates an index, a list of modules and a 
@@ -41,9 +36,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-..
- The following will add the signature of the individual functions and pull
- their docstrings.
-
-.. automodapi:: rainbowprint.example
