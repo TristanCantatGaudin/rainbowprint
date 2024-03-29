@@ -109,7 +109,7 @@ Tutorial for how to change theme, host documentation pages etc: https://olgarith
 
 ## workflow for sphinx
 
-Similar to above, but you only need `conf.py` and `Makefile` and `index.rst` inside the `docs/` directory. In `pyproject.toml` there is a section for optional dependencies, where we list `sphinx`. I have added a workflow that installs the package, then installs these optional dependencies, and builds and deploys the documentation.
+If we upload the result of `sphinx-quickstart` and `sphinx-apidoc` to our main branch, we can use a workflow to perform the `make` and deployment. In `pyproject.toml` I have specified optional dependencies that are only installed by the documentation workflow, which then builds the HTML pages, and pushes the pages to the branch `gh-pages` (this branch needs to already exist).
 
 ## workflow for linting
 
