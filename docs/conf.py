@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'my_package'
-copyright = '2022, Author Name'
-author = 'Author Name'
+project = 'rainbowprint'
+copyright = '2024, TCG'
+author = 'TCG'
 
 
 # -- General configuration ---------------------------------------------------
