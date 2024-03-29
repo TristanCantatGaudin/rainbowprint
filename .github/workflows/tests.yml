@@ -10,6 +10,7 @@ on:
     paths-ignore:
       - '**/README.md'
       - '**/*.yml'
+      - '**/*.rst'
       
   pull_request:
     branches: [ "main" ]
