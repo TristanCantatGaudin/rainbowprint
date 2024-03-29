@@ -69,7 +69,7 @@ I created a second workflow which installs the present package and Jupyter, then
 
 **NB:** if the newly compiled notebook (and corresponding HTML) is unchanged, then "git add ..." will do nothing, and the GitHub Actions both will not upload any new file, which may cause the workflow to exit with an error. So for the sake of this example the notebook also prints the current date and time, just to make sure that the workflow creates new files every time. **tip:** you can also do `git commit -m "Update documentation" -a || true` to allow to workflow to proceed even in case of error.
 
-## documentation with sphinx
+## local documentation with sphinx
 
 Install `sphinx` locally (or `pip install sphinx-rtd-theme` etc to install other themes, see https://sphinx-themes.org/):
 
@@ -106,6 +106,10 @@ The documentation index page is now at: `rainbowprint/docs/_build/html/index.htm
 
 Building and publishing the documentation can even be automated with GitHub actions, to keep up to date with code changes.
 Tutorial for how to change theme, host documentation pages etc: https://olgarithms.github.io/sphinx-tutorial/
+
+## workflow for sphinx
+
+Similar to above, but you only need `conf.py` and `Makefile` and `index.rst` inside the `docs/` directory. In `pyproject.toml` there is a section for optional dependencies, where we list `sphinx`. I have added a workflow that installs the package, then installs these optional dependencies, and builds and deploys the documentation.
 
 ## workflow for linting
 
