@@ -73,10 +73,10 @@ I created a second workflow which installs the present package and Jupyter, then
 
 Install `sphinx` locally (or `pip install sphinx-rtd-theme` etc to install other themes, see https://sphinx-themes.org/):
 
-   pip install sphinx
-   sphinx-quickstart docs
-   sphinx-apidoc --output-dir docs src/rainbowprint --separate
-   cd docs
+	   pip install sphinx
+	   sphinx-quickstart docs
+	   sphinx-apidoc --output-dir docs src/rainbowprint --separate
+	   cd docs
 
 Then there are two steps to perform manually. First, open `conf.py` and replace `extensions = []` with `extensions = ['sphinx.ext.autodoc']`. Then, open `index.rst`, and add a reference to the `module.rst` file, like this:
 
