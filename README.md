@@ -102,7 +102,7 @@ After doing both these things, build the HTML pages with:
 
 The documentation index page is now at: `rainbowprint/docs/_build/html/index.html`
 
-**Publishing the documentation:** it is common to not have a `docs` directory on the main branch, and to upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch, so in the present case (if we activated GitHub Pages for a branch of this repo) the documentation would be accessible at https://tristancantatgaudin.github.io/rainbowprint 
+**Publishing the documentation:** it is common to not have a `docs` directory on the main branch, and to upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch (if you create a branch name `gh-pages` it is even enabled by default), so in the present case (if we activated GitHub Pages for a branch of this repo) the documentation would be accessible at https://tristancantatgaudin.github.io/rainbowprint 
 
 Building and publishing the documentation can even be automated with GitHub actions, to keep up to date with code changes.
 Tutorial for how to change theme, host documentation pages etc: https://olgarithms.github.io/sphinx-tutorial/
