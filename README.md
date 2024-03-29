@@ -44,7 +44,7 @@ and crashes with the error message *AttributeError: module 'rainbowprint' has no
 
 This file contains some basic information about the package (e.g. name, version) but importantly lists dependencies (in the present case `matplotlib`, it will be automatically installed when you install `rainbowprint`) and the installation package (called a *build backend*) that `pip` (the *build frontend* tool) will rely on for the installation (here we chose `setuptools` as a build backend).
 
-# Improving the package
+# Improvements
 
 All the rest is "optional", but many extra features are useful. For instance, having a `README.md` file in the main directory of the repository (this file). GitHub creates one by default when you create a repo, unless you explicitly ask it not to. It can also automatically create a `LICENSE` file (see e.g. https://choosealicense.com).
 
@@ -73,15 +73,33 @@ I created a second workflow which installs the present package and Jupyter, then
 
 Install `sphinx locally` (or `pip install sphinx-rtd-theme` etc to install other themes, see https://sphinx-themes.org/):
 
-	pip install sphinx
-  	sphinx-quickstart docs
-   	sphinx-apidoc --output-dir docs src/rainbowprint --separate
-    	cd docs
-     	make html
+   pip install sphinx
+   sphinx-quickstart docs
+   sphinx-apidoc --output-dir docs src/rainbowprint --separate
+   cd docs
 
-This will prompt a few basic questions (package name, author, version) and create new files. 
+Then there are two steps to perform manually. First, open `conf.py` and replace `extensions = []
+` with `extensions = ['sphinx.ext.autodoc']`. Then, open `index.rst`, and add a reference to the `module.rst` file, like this:
 
-...
+	Welcome to rainbowprint's documentation!
+	========================================
+	
+	.. toctree::
+	   :maxdepth: 2
+	   :caption: Contents:
+	
+	   modules
+	
+	Indices and tables
+	==================
+
+After doing both these things, build the HTML pages with:
+
+   make html
+
+The documentation index page is now at: `rainbowprint/docs/_build/html/index.html`
+
+Tutorial for how to change theme, host documentation pages etc: https://olgarithms.github.io/sphinx-tutorial/
 
 ## workflow for linting
 
