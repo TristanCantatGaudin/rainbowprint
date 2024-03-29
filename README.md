@@ -74,8 +74,10 @@ I created a second workflow which installs the present package and Jupyter, then
 Install `sphinx locally` (or `pip install sphinx-rtd-theme` etc to install other themes, see https://sphinx-themes.org/):
 
 	pip install sphinx
- 	cd docs
-  	sphinx-quickstart
+  	sphinx-quickstart docs
+   	sphinx-apidoc --output-dir docs src/rainbowprint --separate
+    	cd docs
+     	make html
 
 This will prompt a few basic questions (package name, author, version) and create new files. 
 
