@@ -1,7 +1,8 @@
 name: sphinxdocumentation
 
 on: [push]
-
+permissions:
+  contents: write
 jobs:
   build:
 
