@@ -102,6 +102,8 @@ After doing both these things, build the HTML pages with:
 
 The documentation index page is now at: `rainbowprint/docs/_build/html/index.html`
 
+**Btw:** You do not need to re-run `sphinx-apidoc` to generate new `.rst` if you modify their corresponding `.py` files! You’d only ever need to re-run `sphinx-apidoc` if you add more modules to your project. If the structure is there, all you need to redo is `make html`.
+
 **Publishing the documentation:** it is common to not have a `docs` directory on the main branch, and to upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch (if you create a branch name `gh-pages` it is even enabled by default), so in the present case (if we activated GitHub Pages for a branch of this repo) the documentation would be accessible at https://tristancantatgaudin.github.io/rainbowprint 
 
 Building and publishing the documentation can even be automated with GitHub actions, to keep up to date with code changes.
