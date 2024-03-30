@@ -78,7 +78,7 @@ Install `sphinx` locally (or `pip install sphinx-rtd-theme` etc to install other
 	sphinx-apidoc --output-dir docs src/rainbowprint --separate
 	cd docs
 
-Then there are two steps to perform manually. First, open `conf.py` and replace `extensions = []` with `extensions = ['sphinx.ext.autodoc']`. Then, open `index.rst`, and add a reference to the `module.rst` file, like this:
+This created a bunch of files, including several `.rst` files which we are later going to "compile" into HTML web pages. They can be edited manually, you can write any text you like, and in particular we want to open `index.rst` and add a reference to the `module.rst` file, like this:
 
 	Welcome to rainbowprint's documentation!
 	========================================
@@ -96,13 +96,15 @@ Then there are two steps to perform manually. First, open `conf.py` and replace 
 	* :ref:`modindex`
 	* :ref:`search`
 
-After doing both these things, build the HTML pages with:
+Then we open `conf.py` and replace `extensions = []` with `extensions = ['sphinx.ext.autodoc']`. This extension allows sphinx to read the docstrings from our source code and create the nice looking documentation.
+
+Now build the HTML pages with:
 
    make html
 
 The documentation index page is now at: `rainbowprint/docs/_build/html/index.html`
 
-**Btw:** You do not need to re-run `sphinx-apidoc` to generate new `.rst` if you modify their corresponding `.py` files! You’d only ever need to re-run `sphinx-apidoc` if you add more modules to your project. If the structure is there, all you need to redo is `make html`.
+**Btw:** You do not need to re-run `sphinx-apidoc` to generate new `.rst` if you modify their corresponding `.py` files. You’d only ever need to re-run `sphinx-apidoc` if you add more modules to your project. If the structure is there, all you need to redo is `make html`.
 
 **Publishing the documentation:** it is common to not have a `docs` directory on the main branch, and to upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch (if you create a branch name `gh-pages` it is even enabled by default), so in the present case (if we activated GitHub Pages for a branch of this repo) the documentation would be accessible at https://tristancantatgaudin.github.io/rainbowprint 
 
