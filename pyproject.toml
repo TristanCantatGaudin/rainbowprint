@@ -17,6 +17,7 @@ docs = [
     "furo",
     "sphinx-automodapi",
     "numpydoc",
+    "nbsphinx",
 ]
 test = [
     "pytest",
