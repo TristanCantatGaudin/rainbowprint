@@ -18,7 +18,6 @@ docs = [
     "sphinx-automodapi",
     "numpydoc",
     "nbsphinx",
-    "pandoc",
 ]
 test = [
     "pytest",
