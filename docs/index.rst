@@ -11,7 +11,6 @@ Welcome to rainbowprint's documentation!
    :caption: Contents:
 
    modules
-   notebook1
 
 Indices and tables
 ==================
