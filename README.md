@@ -108,7 +108,9 @@ The documentation index page is now at: `rainbowprint/docs/_build/html/index.htm
 
 **Publishing the documentation:** it is common to not have a `docs` directory on the main branch, and to upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch (if you create a branch name `gh-pages` it is even enabled by default), so in the present case (if we activated GitHub Pages for a branch of this repo) the documentation would be accessible at https://tristancantatgaudin.github.io/rainbowprint 
 
-**Tip:** on GitHub pages the directories starting with an underscore are sometimes ignored when rendering HTML pages, but Sphinx outputs directories with underscores. Add an empty file named `docs/.nojekyll` to your doc to solve this.
+**Tip 1:** on GitHub pages the directories starting with an underscore are sometimes ignored when rendering HTML pages, but Sphinx outputs directories with underscores. Add an empty file named `docs/.nojekyll` to your doc to solve this.
+
+**Tip 2:** if you add `"nbsphinx"` to the extensions in `conf.py`, your tables of content will support notebooks.
 
 Building and publishing the documentation can even be automated with GitHub actions, to keep up to date with code changes.
 Tutorial for how to change theme, host documentation pages etc: https://olgarithms.github.io/sphinx-tutorial/
