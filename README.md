@@ -123,6 +123,14 @@ If we upload the result of `sphinx-quickstart` and `sphinx-apidoc` to our main b
 
 ...
 
+## ssh key
+
+To clone the repo and be able to push changes to GitHub you need to set up a valid SSH key, and provide the public key to GitHub. (see e.g. https://gist.github.com/yinzara/bbedc35798df0495a4fdd27857bca2c1). You will create a new password associated with this SSH key, it will not affect your GitHub account, only how your machine authenticates to the account. Then:
+
+	git clone git@github.com:TristanCantatGaudin/rainbowprint.git
+
+becomes possible.
+
 ## pypi 
 
 tags, versions, releases
