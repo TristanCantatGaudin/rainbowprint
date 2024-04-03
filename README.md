@@ -129,7 +129,7 @@ To clone the repo and be able to push changes to GitHub you need to set up a val
 
 	git clone git@github.com:TristanCantatGaudin/rainbowprint.git
 
-becomes possible.
+will allow you to push your commits.
 
 ## pypi 
 
