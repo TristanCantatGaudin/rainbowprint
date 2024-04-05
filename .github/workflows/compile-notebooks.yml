@@ -22,7 +22,7 @@ jobs:
       - name: Convert notebook to html
         run: |
           jupyter nbconvert --to notebook --execute docs/notebook1.ipynb --inplace
-          jupyter nbconvert --to html --execute docs/notebook1.ipynb
+          jupyter nbconvert --to html docs/notebook1.ipynb
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
