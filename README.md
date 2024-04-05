@@ -135,7 +135,11 @@ To clone the repo and be able to push changes to GitHub you need to set up a val
 
 	git clone git@github.com:TristanCantatGaudin/rainbowprint.git
 
-will allow you to push your commits.
+will allow you to push your commits. If you have multiple ssh keys, once inside the directory corresponding to that repository, do:
+
+	git config --add --local core.sshCommand 'ssh -i /Users/myUserName/.ssh/key1_rsa'
+
+ (or wherever your private key is located) to set the key for this particular repo.
 
 ## pypi 
 
