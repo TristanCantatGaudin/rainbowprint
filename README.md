@@ -145,4 +145,4 @@ will allow you to push your commits. If you have multiple ssh keys, once inside 
 
 ## pypi 
 
-tags, versions, releases
+tags, releases
