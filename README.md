@@ -127,7 +127,9 @@ It looks the same as the one we built ourselves at https://tristancantatgaudin.g
 
 ## workflow for linting
 
-...
+https://www.freecodecamp.org/news/github-super-linter/
+
+https://github.com/marketplace/actions/lint-action
 
 ## ssh key
 
