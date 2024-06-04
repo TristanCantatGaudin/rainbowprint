@@ -38,7 +38,7 @@ To test in one line that it worked, you can type:
 	import rainbowprint
 	rainbowprint.functions.rainbowprint('some string')
 
-and crashes with the error message *AttributeError: module 'rainbowprint' has no attribute 'functions'*. We can add `from .functions import *` to the `__init__.py` file so that importing the package imports the `functions` module too. At also allows `from rainbowprint import functions` to work, because the module now exists in the namespace of the package.
+and crashes with the error message *AttributeError: module 'rainbowprint' has no attribute 'functions'*. We can add `from .functions import *` to the `__init__.py` file so that importing the package imports the `functions` module too. It also allows `from rainbowprint import functions` to work, because the module now exists in the namespace of the package.
 
 ## Necessary file: pyproject.toml
 
@@ -46,7 +46,7 @@ This file contains some basic information about the package (e.g. name, version)
 
 # Improvements
 
-All the rest is "optional", but many extra features are useful. For instance, having a `README.md` file in the main directory of the repository (this file). GitHub creates one by default when you create a repo, unless you explicitly ask it not to. It can also automatically create a `LICENSE` file (see e.g. https://choosealicense.com).
+Everything beyond this point is "optional", but many extra features are useful. For instance, having a `README.md` file in the main directory of the repository (this file). GitHub creates one by default when you create a repo, unless you explicitly ask it not to. It can also automatically create a `LICENSE` file (see e.g. https://choosealicense.com).
 
 ## tests
 
