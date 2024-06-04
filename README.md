@@ -100,13 +100,13 @@ Then we open `conf.py` and replace `extensions = []` with `extensions = ['sphinx
 
 Now build the HTML pages with:
 
-   make html
+	make html
 
 The documentation index page is now at: `rainbowprint/docs/_build/html/index.html`
 
-**Btw:** If you modify the `.py` files, all you need to re-run is `make html`.
+**Btw:** If you modify the docstrings in the `.py` files, all you need to re-run is `make html`.
 
-**Publishing the documentation:** it is common to not have a `docs` directory on the main branch, and to instead upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch (if you create a branch name `gh-pages` it is even enabled by default), so in the present case (if we activated GitHub Pages for a branch of this repo) the documentation is accessible at https://tristancantatgaudin.github.io/rainbowprint 
+**Publishing the documentation:** it is common to NOT have a `docs` directory on the main branch, and to INSTEAD upload the HTML pages to a separate branch of the repo, which doesn't contain any of the code. GitHub allows you to enable GitHub Pages for that one branch (if you create a branch name `gh-pages` it is even enabled by default). In the present case (since we activated GitHub Pages for a branch of this repo) the documentation is accessible at: https://tristancantatgaudin.github.io/rainbowprint 
 
 **Tip 1:** on GitHub pages the directories starting with an underscore are sometimes ignored when rendering HTML pages, but Sphinx outputs directories with underscores. Add an empty file named `docs/.nojekyll` to your doc to solve this.
 
