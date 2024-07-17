@@ -27,7 +27,7 @@ Or, to install it in a fresh environment:
    	conda activate someNewEnvName
    	conda install pip
 
-and then go for `pip install...`
+and then go for `pip install git+https://github.com/TristanCantatGaudin/rainbowprint.git`
 
 To test in one line that it worked, you can type:
 
