@@ -67,7 +67,7 @@ in `Settings -> Actions -> General -> Workflow permissions` make sure that "Read
 
 I created a second workflow which installs the present package and Jupyter, then executes the notebook in `docs/notebook1.ipynb`, then converts the result to an HTML page and uploads (commits + pushes) both these files to the repository. This workflow can only be started manually. The resulting page is visible here: https://htmlpreview.github.io/?https://github.com/TristanCantatGaudin/rainbowprint/blob/main/docs/notebook1.html
 
-**NB:** if the newly compiled notebook (and corresponding HTML) is unchanged, then "git add ..." will do nothing, and the GitHub Actions both will not upload any new file, which may cause the workflow to exit with an error. So for the sake of this example the notebook also prints the current date and time, just to make sure that the workflow creates new files every time. **tip:** you can also do `git commit -m "Update documentation" -a || true` to allow to workflow to proceed even in case of error.
+**NB:** if the newly compiled notebook (and corresponding HTML) is unchanged, then "git add ..." will do nothing, and the GitHub Actions bot will not upload any new file, which may cause the workflow to exit with an error. So for the sake of this example the notebook also prints the current date and time, just to make sure that the workflow creates new files every time. **tip:** you can also do `git commit -m "Update documentation" -a || true` to allow to workflow to proceed even in case of error.
 
 ## local documentation with sphinx
 
